@@ -1,0 +1,34 @@
+.container {
+  display: inline-flex;
+  background-color: rgba(0,0,0,0.05);
+  box-shadow: inset 0 2px 0 rgba(0,0,0,.12);
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.button {
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  outline: 0;
+  background-color: #BFC9CA;
+  color: white;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
+  padding: 8px 12px;
+  transition: .2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #AAB7B8;
+}
+
+.button:active {
+  box-shadow: inset 0 2px 0 rgba(0,0,0,.12);
+}
+
+.label {
+  font-size: 12px;
+  align-self: center;
+  padding: 0 15px;
+  opacity: .4;
+}
