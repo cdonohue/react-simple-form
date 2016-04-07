@@ -1,14 +1,3 @@
-.text {
-  display: block;
-  width: 100%;
-  resize: none;
-  background: 0 0;
-  outline: 0;
-  box-sizing: border-box;
-  font-size: 30px;
-  line-height: 40px;
-  padding: 3px;
-  margin: 2px;
-  border: 2px dashed rgba(0,0,0,.12);
-  border-radius: 6px;
+.confirm {
+  margin-top: 12px
 }

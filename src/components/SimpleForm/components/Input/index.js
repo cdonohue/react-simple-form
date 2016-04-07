@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import { applyContainerQuery } from "react-container-query";
 
-import input from "./Input.css";
+import Text from "./Text";
+import Select from "./Select";
 
 class Input extends Component {
   render() {
-    return (
-      <div>
-        <input autofocus className={input.text} type="text" />
-      </div>
-    );
+    const { choices, confirm } = this.props;
+
+    if (choices && choices.length) {
+      return <Select confirm={confirm} choices={choices} />;
+    }
+
+    return <Text confirm={confirm} />;
   }
 }
 

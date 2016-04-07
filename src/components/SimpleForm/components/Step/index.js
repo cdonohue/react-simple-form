@@ -1,24 +1,32 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import classnames from "classnames";
-import advanceForm from "../../actions";
+
+import actions from "../../actions";
 
 import step from "./Step.css";
 
 import Input from "../Input";
 
-import createConfirm from "../Confirm";
+const mapStateToProps = (state) => ({
+  currentStep: state.form.currentStep
+});
 
-const Step = React => ({ question, isActive, state }) => {
-  const Confirm = createConfirm(React);
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actions, dispatch);
+}
 
-  const handleConfirm = () => {
-    advanceForm(state);
+const Step = ({ advanceFormStep, question, isActive, currentStep, saveFormValue }) => {
+  const saveValue = (value) => {
+    saveFormValue(question.id, value);
+    advanceFormStep();
   }
 
   return (
-    <div className={classnames(step.container, {[step.active]: isActive})}>
+    <div className={step.container}>
       <span className={step.item}>
-        {state.currentStep}.
+        {currentStep}.
       </span>
       <section className={step.question}>
         {question.description}
@@ -27,13 +35,15 @@ const Step = React => ({ question, isActive, state }) => {
         <div className={step.description}>
           {question.helperText}
         </div>
-        <Input type="text" />
-        <div className={step.confirm}>
-          <Confirm buttonText="Ok" label="press ENTER" onConfirm={handleConfirm} />
-        </div>
+        <Input
+          type={question.type}
+          name={question.id}
+          choices={question.choices}
+          confirm={saveValue}
+        />
       </section>
     </div>
   )
 }
 
-export default Step;
+export default connect(mapStateToProps, mapDispatchToProps)(Step);

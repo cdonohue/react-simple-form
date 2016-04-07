@@ -1,8 +1,9 @@
+import React from "react";
 import confirm from "./Confirm.css";
 
-const Confirm = React => ({ buttonText, label, onConfirm }) => (
+const Confirm = ({ buttonText, label, handleConfirm }) => (
   <div className={confirm.container}>
-    <button className={confirm.button} onClick={onConfirm}>
+    <button className={confirm.button} onClick={handleConfirm}>
       {buttonText}
     </button>
     <label className={confirm.label}>

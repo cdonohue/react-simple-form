@@ -1,9 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-import createApp from "./components/App";
-
-const App = createApp(React);
+import App from "./components/App";
 
 render(
   <App />,

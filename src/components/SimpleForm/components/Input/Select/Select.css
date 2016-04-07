@@ -1,0 +1,74 @@
+.list {
+  margin: 0;
+  padding: 0;
+  margin-left: -3px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  outline: 0;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.hiddenInput {
+  visibility: hidden;
+}
+
+.item {
+  margin: 4px 6px 8px;
+  display: block;
+}
+
+.button {
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  outline: none;
+  text-align: left;
+  background-color: rgba(0,0,0,.06);
+  border: 2px solid rgba(0,0,0,.06);
+  transition: .1s ease-in-out;
+}
+
+.itemHover {
+  background-color: #AED6F1;
+}
+
+.itemSelection {
+  background-color: #5DADE2;
+  color: white;
+}
+
+.button:hover {
+  background-color: #AED6F1;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #5DADE2;
+  color: white;
+}
+
+.shortcutKey {
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,.12);
+  padding: 3px 6px;
+  margin-right: 8px;
+  min-width: 12px;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.small {
+  flex-basis: 100%;
+}
+
+.large {
+  flex-basis: 45%;
+}
