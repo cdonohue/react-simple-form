@@ -12,11 +12,12 @@ export default handleActions({
     return {
       ...state,
       data: {
-        ...state.form,
+        ...state.data,
         [key]: value,
       }
     }
   }
 }, {
   currentStep: 1,
+  data: {},
 });

@@ -8,11 +8,11 @@ import SimpleFormContainer from "./SimpleForm";
 const questions = [
   {
     description: "Hi, what's your name?",
-    id: "age",
+    id: "name",
     type: "text",
   },
   {
-    description: "What degree are you interested in?",
+    description: "<%= name %>, what degree are you interested in?",
     type: "select",
     id: "degree",
     helperText: "Degrees range in completion time. Consider which one best fits your career goals and academic interests",
@@ -42,6 +42,11 @@ const questions = [
         value: 6,
       },
     ]
+  },
+  {
+    description: "How old are you, <%= name %>?",
+    id: "age",
+    type: "number",
   },
 ]
 

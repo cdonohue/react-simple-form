@@ -12,7 +12,7 @@
   border: none;
   border-radius: 4px;
   outline: 0;
-  background-color: #5DADE2;
+  background-color: #F17D7D;
   color: white;
   box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
   padding: 8px 12px;
@@ -20,7 +20,7 @@
 }
 
 .button:hover {
-  background-color: #3498DB;
+  background-color: #EE3534;
 }
 
 .button:active {

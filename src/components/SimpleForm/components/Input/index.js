@@ -5,13 +5,13 @@ import Select from "./Select";
 
 class Input extends Component {
   render() {
-    const { choices, confirm } = this.props;
+    const { choices, confirm, type } = this.props;
 
     if (choices && choices.length) {
       return <Select confirm={confirm} choices={choices} />;
     }
 
-    return <Text confirm={confirm} />;
+    return <Text confirm={confirm} type={type} />;
   }
 }
 

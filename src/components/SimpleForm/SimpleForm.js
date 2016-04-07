@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { applyContainerQuery } from "react-container-query";
+import classnames from "classnames";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
@@ -32,14 +34,27 @@ class SimpleForm extends Component {
   }
 
   render() {
-    const { currentStep } = this.props;
+    const { containerQuery, currentStep } = this.props;
 
     return (
-      <section className={simpleForm.questions}>
+      <section className={classnames(simpleForm.questions, containerQuery)}>
         {this.renderQuestion(currentStep)}
       </section>
     );
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SimpleForm);
+const query = {
+  [simpleForm.small]: {
+    maxHeight: 450,
+  },
+
+  [simpleForm.large]: {
+    minHeight: 450,
+  }
+}
+
+export default applyContainerQuery(
+  connect(mapStateToProps, mapDispatchToProps)(SimpleForm),
+  query,
+);

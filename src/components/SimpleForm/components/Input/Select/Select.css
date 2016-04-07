@@ -34,21 +34,21 @@
 }
 
 .itemHover {
-  background-color: #AED6F1;
+  background-color: #F17D7D;
 }
 
 .itemSelection {
-  background-color: #5DADE2;
+  background-color: #EE3534;
   color: white;
 }
 
 .button:hover {
-  background-color: #AED6F1;
+  background-color: #F17D7D;
   cursor: pointer;
 }
 
 .button:active {
-  background-color: #5DADE2;
+  background-color: #EE3534;
   color: white;
 }
 

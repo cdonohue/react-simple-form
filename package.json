@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cdonohue/simple-forms#readme",
   "dependencies": {
     "classnames": "2.2.3",
+    "lodash": "4.8.2",
     "normalize.css": "4.0.0",
     "react": "15.0.0-rc.2",
     "react-container-query": "0.4.0",

@@ -28,9 +28,11 @@ class Text extends Component {
   }
 
   render() {
+    const { type } = this.props;
+
     return (
       <div>
-        <input ref="textInput" className={text.textInput} onKeyUp={this.handleKeyUp} type="text" />
+        <input ref="textInput" className={text.textInput} onKeyUp={this.handleKeyUp} type={type} />
         <Confirm buttonText="Ok" label="press ENTER" handleConfirm={this.handleConfirm} />
       </div>
     )

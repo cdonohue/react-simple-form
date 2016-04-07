@@ -2,7 +2,6 @@
   border-radius: 6px;
   list-style-type: none;
   margin: 0;
-  padding: 30px 20px 30px 0;
   max-width: 600px;
   width: 100%;
   flex-direction: column;
@@ -42,4 +41,14 @@
 
 .confirm {
   margin-top: 12px;
+}
+
+.small {
+  font-size: 16px;
+  padding: 15px 10px 15px 0;
+}
+
+.large {
+  font-size: 32px;
+  padding: 30px 20px 30px 0;
 }

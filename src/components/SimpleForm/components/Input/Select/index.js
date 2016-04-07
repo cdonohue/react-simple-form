@@ -31,11 +31,11 @@ class Select extends Component {
 
 const query = {
   [select.small]: {
-    maxWidth: 500,
+    maxWidth: 520,
   },
 
   [select.large]: {
-    minWidth: 501,
+    minWidth: 521,
   }
 }
 
