@@ -4,10 +4,6 @@ import Text from "./Text";
 import Select from "./Select";
 
 class Input extends Component {
-  componentWillUnmount() {
-    console.log("Component's gonna unmount...");
-  }
-
   render() {
     const { choices, confirm, type, name } = this.props;
 
