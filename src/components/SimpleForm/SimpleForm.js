@@ -23,6 +23,7 @@ const mapDispatchToProps = (dispatch) => {
 class SimpleForm extends Component {
   renderQuestion = () => {
     const { questions = [], currentStep } = this.props;
+    const { progress } = this.refs;
     const currentQuestion = questions[currentStep - 1];
 
     if (currentQuestion) {
@@ -31,7 +32,17 @@ class SimpleForm extends Component {
       )
     }
 
+    progress.style.height = "0";
+
     return <FinalStep />
+  }
+
+  componentDidMount() {
+    const { progress } = this.refs;
+
+    setTimeout(() => {
+      progress.style.height = "18px";
+    }, 100);
   }
 
   calculatePercentageCompletion = () => {
@@ -48,7 +59,7 @@ class SimpleForm extends Component {
         <section className={classnames(simpleForm.questions, containerQuery)}>
           {this.renderQuestion()}
         </section>
-        <div className={simpleForm.progress}>
+        <div ref="progress" className={simpleForm.progress}>
           <Progress percentage={this.calculatePercentageCompletion()} />
         </div>
       </div>
