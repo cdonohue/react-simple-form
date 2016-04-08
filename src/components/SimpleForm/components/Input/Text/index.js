@@ -32,7 +32,7 @@ class Text extends Component {
 
     return (
       <div>
-        <input ref="textInput" name={name} className={text.textInput} onKeyUp={this.handleKeyUp} type={type} />
+        <input autoComplete="off" ref="textInput" name={name} className={text.textInput} onKeyUp={this.handleKeyUp} type={type} />
         <Confirm buttonText="Ok" label="press ENTER" handleConfirm={this.handleConfirm} />
       </div>
     )

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { applyContainerQuery } from "react-container-query";
 import classnames from "classnames";
+import keydown from "react-keydown";
 
 import select from "./Select.css";
 
@@ -9,6 +10,13 @@ const getLetter = (index) => {
 }
 
 class Select extends Component {
+  componentWillReceiveProps( { keydown } ) {
+    if ( keydown.event ) {
+      // inspect the keydown event and decide what to do
+      console.log( keydown.event.which );
+    }
+  }
+
   render() {
     const { choices = [], confirm, containerQuery } = this.props;
 
@@ -39,4 +47,4 @@ const query = {
   }
 }
 
-export default applyContainerQuery(Select, query);
+export default applyContainerQuery(keydown(Select), query);

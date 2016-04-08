@@ -16,13 +16,13 @@ class FinalStep extends Component {
       <section className={classnames(finalStep.container, finalStep.rollIn)}>
         <div className={finalStep.content}>
           <div className={finalStep.heading}>
-            <span className={finalStep.title}>Thanks, {name || "brah"}!</span>
+            <span className={finalStep.title}>Thanks, brah!</span>
             <span className={classnames(finalStep.checkmark, finalStep.zoomIn)}></span>
           </div>
           <div className={finalStep.description}>
-            {"Why not take a look at some schools that we think you might be fit for?"}
+            Why not take a look at some schools that we think you might be fit for?
           </div>
-          <button className={finalStep.button}>Show me 42 schools</button>
+          <button className={finalStep.button}>Show <strong>42</strong> schools</button>
         </div>
       </section>
     );

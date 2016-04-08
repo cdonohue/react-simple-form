@@ -30,7 +30,7 @@
   text-align: left;
   background-color: rgba(0,0,0,.06);
   border: 2px solid rgba(0,0,0,.06);
-  transition: .1s ease-in-out;
+  transition: .1s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
 .itemHover {
