@@ -39,7 +39,7 @@
 
 .itemSelection {
   background-color: #EE3534;
-  color: white;
+  color: #FFFFFF;
 }
 
 .button:hover {
@@ -49,14 +49,14 @@
 
 .button:active {
   background-color: #EE3534;
-  color: white;
+  color: #FFFFFF;
 }
 
 .shortcutKey {
   border-radius: 3px;
   text-transform: uppercase;
   text-align: center;
-  color: white;
+  color: #FFFFFF;
   background: rgba(0,0,0,.12);
   padding: 3px 6px;
   margin-right: 8px;

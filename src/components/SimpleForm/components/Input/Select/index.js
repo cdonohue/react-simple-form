@@ -10,10 +10,10 @@ const getLetter = (index) => {
 }
 
 class Select extends Component {
-  componentWillReceiveProps( { keydown } ) {
-    if ( keydown.event ) {
+  componentWillReceiveProps({ keydown }) {
+    if (keydown.event) {
       // inspect the keydown event and decide what to do
-      console.log( keydown.event.which );
+      console.log(keydown.event.which);
     }
   }
 

@@ -21,14 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class SimpleForm extends Component {
-  constructor() {
-    super();
-
-    this.calculatePercentageCompletion = this.calculatePercentageCompletion.bind(this);
-    this.renderQuestion = this.renderQuestion.bind(this);
-  }
-
-  renderQuestion() {
+  renderQuestion = () => {
     const { questions = [], currentStep } = this.props;
     const currentQuestion = questions[currentStep - 1];
 
@@ -41,7 +34,7 @@ class SimpleForm extends Component {
     return <FinalStep />
   }
 
-  calculatePercentageCompletion() {
+  calculatePercentageCompletion = () => {
     const { questions, currentStep } = this.props;
 
     return currentStep / (questions.length + 1) * 100;

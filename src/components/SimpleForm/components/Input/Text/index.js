@@ -4,20 +4,14 @@ import text from "./Text.css";
 import Confirm from "../../Confirm";
 
 class Text extends Component {
-  constructor() {
-    super();
-    this.handleConfirm = this.handleConfirm.bind(this);
-    this.handleKeyUp = this.handleKeyUp.bind(this);
-  }
-
-  handleConfirm() {
+  handleConfirm = () => {
     const { confirm } = this.props;
     const { textInput } = this.refs;
 
     confirm(textInput.value);
   }
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.keyCode === 13) {
       return this.handleConfirm();
     };

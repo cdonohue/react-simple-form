@@ -21,21 +21,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class Step extends Component {
-  constructor() {
-    super();
-
-    this.saveValue = this.saveValue.bind(this);
-    this.fillInTemplateFromFormState = this.fillInTemplateFromFormState.bind(this);
-  }
-
-  saveValue(value) {
+  saveValue = (value) => {
     const { advanceFormStep, question, saveFormValue } = this.props;
 
     saveFormValue(question.id, value);
     advanceFormStep();
   }
 
-  fillInTemplateFromFormState(templateStr) {
+  fillInTemplateFromFormState = (templateStr) => {
     const { form } = this.props;
 
     return template(templateStr)(form);
