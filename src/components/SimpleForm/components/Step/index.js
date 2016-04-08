@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import classnames from "classnames";
 import { template } from "lodash";
+import { applyContainerQuery } from "react-container-query";
 
 import actions from "../../actions";
 
@@ -41,21 +42,27 @@ class Step extends Component {
   }
 
   render() {
-    const { advanceFormStep, question, isActive, currentStep, saveFormValue } = this.props;
+    const {
+      advanceFormStep,
+      containerQuery,
+      question,
+      currentStep,
+      saveFormValue
+    } = this.props;
 
     return (
-      <div className={step.container}>
+      <div key={currentStep} className={classnames(step.flip, step.container, containerQuery)}>
         <section>
           <span className={step.item}>
             {currentStep}.
           </span>
           <div className={step.question}>
-            {this.fillInTemplateFromFormState(question.description)}
+            {this.fillInTemplateFromFormState(question.title)}
           </div>
         </section>
         <section className={step.content}>
           <div className={step.description}>
-            {question.helperText}
+            {question.description}
           </div>
           <Input
             type={question.type}
@@ -69,4 +76,17 @@ class Step extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Step);
+const query = {
+  [step.small]: {
+    maxWidth: 400,
+  },
+
+  [step.large]: {
+    minWidth: 401
+  }
+}
+
+export default applyContainerQuery(
+  connect(mapStateToProps, mapDispatchToProps)(Step),
+  query
+);
