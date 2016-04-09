@@ -1,3 +1,3 @@
 # Simple Form Component
 
-![Simple Forms Demo](simple-forms-demo.gif)
+![Simple Forms Demo](simple-form-demo.gif)
