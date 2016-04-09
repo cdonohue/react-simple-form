@@ -16,7 +16,7 @@ class FinalStep extends Component {
       <section className={classnames(finalStep.container, finalStep.rollIn)}>
         <div className={finalStep.content}>
           <div className={finalStep.heading}>
-            <span className={finalStep.title}>Thanks, brah!</span>
+            <span className={finalStep.title}>Thanks, {name}!</span>
             <span className={classnames(finalStep.checkmark, finalStep.zoomIn)}></span>
           </div>
           <div className={finalStep.description}>
