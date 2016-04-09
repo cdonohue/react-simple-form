@@ -3,7 +3,7 @@ import React from "react";
 import "normalize.css/normalize.css";
 import styles from "./App.css";
 
-import SimpleFormContainer from "./SimpleForm";
+import SimpleFormContainer from "../../lib/SimpleForm";
 
 const questions = [
   {
