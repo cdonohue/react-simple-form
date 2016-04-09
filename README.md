@@ -1,7 +1,7 @@
 # Simple Form Component
 > This is a work-in-progress of how configurable forms would look as a React component
 
-![Simple Forms Demo](simple-form-demo.gif)
+![Simple Forms Demo](form-demo.gif)
 
 The goal here is to have a main component that takes in an array of `questions`. Then, based on the configuration, renders the correct form inputs. The sub-components, along with the main component make use of `container-queries`, so each component makes the best use of the space that it takes up.
 
