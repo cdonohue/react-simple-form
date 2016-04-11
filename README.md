@@ -30,3 +30,8 @@ This component also uses templating, so the above `<%= name %>` will get replace
 There is still much more to do to on this. Some ideas are:
 - Keyboard navigation for the select inputs
 - Collapsing select inputs to a dropdown when the element gets smaller
+
+### Installation and Demo
+1. `npm install`
+2. `npm start`
+3. Browse to `localhost:3000/`
